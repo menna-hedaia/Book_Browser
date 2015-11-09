@@ -5,7 +5,7 @@ BookBrowse::Application.routes.draw do
   root :to => 'static_pages#home'
   match '/about' , to: 'static_pages#about', via:'get'
   match '/books' , to:  'books#index', via: 'get'
-  match '/details' , to: 'books#show', via: 'get'
+  #match '/details/:id' , to: 'books#show', via: 'get'
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

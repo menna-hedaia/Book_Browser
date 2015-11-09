@@ -3,7 +3,7 @@
 <%= will_paginate %>
 <ul>
 <% @books.each do |book| %>
-       <li><p><b> <%= book.try(:title) %></b> <br> Written by : <i><%= book.try(:author) %></i> , Published by : <%= book.try(:publisher) %></p> 
+       <li><%= render 'shared/book_info', :book => book %>
        	<br><i><%= link_to "Details" , book_path(book) %></i></li>
     <% end %>
 </ul>
