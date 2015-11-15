@@ -3,7 +3,7 @@ require 'spec_helper'
 
 describe StaticPagesController do
 render_views
-  describe "Home page" do
+  describe "#home" do
     it "returns http success" do
       get :home
       assert_response :success
@@ -27,7 +27,7 @@ render_views
 
   end
 
-  describe "About page" do
+  describe "#about" do
     it "returns http success" do
       get :about
       assert_response :success

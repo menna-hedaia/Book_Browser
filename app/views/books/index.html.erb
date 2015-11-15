@@ -1,11 +1,12 @@
 <% provide(:title, "All Books") %>
 <h1>All Books</h1>
-<%= will_paginate %>
+<%= will_paginate @books %>
 <ul>
 <% @books.each do |book| %>
        <li><%= render 'shared/book_info', :book => book %>
-       	<br><i><%= link_to "Details" , book_path(book) %></i></li>
+       	   <%= render 'shared/admin_links' , :book => book %>
+           </li>
     <% end %>
 </ul>
-<%= will_paginate %>
+<%= will_paginate @books%>
 

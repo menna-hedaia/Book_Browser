@@ -1,8 +1,3 @@
-
-<p><b><%= book.title %></b> <br></p>
-	 <% if book.author? %>
-	   		Written by : <i><%= book.author%></i> 
-	   <%end%>
-	   <% if book.publisher? %>
-	   		, Published by : <%= book.publisher %></p>
-	   <%end%>
+<div>
+<b><%= book.title %></b> <% if book.author? %> Written by : <i><%= book.author%></i> <%end%><% if book.publisher? %>, Published by : <%= book.publisher %><%end%>
+</div>
